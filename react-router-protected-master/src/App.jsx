@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 
-// Define el componente principal de tu aplicación
 const App = () => {
   return (
     <Router>
