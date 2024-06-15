@@ -1,28 +1,20 @@
-import { useState } from "react";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import { Admin, Analytics, Dashboard, Home, Landing } from "./pages";
+// Importa React y cualquier otra dependencia necesaria
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import LandingPage from './components/LandingPage';
 
-function App() {
-  const [user, setUser] = useState(null);
-
-  const login = () =>
-    setUser({
-      id: 1,
-      name: "John",
-      permissions: ["analyze"],
-      roles: ["admin"],
-    });
-
-  const logout = () => setUser(null);
-
+// Define el componente principal de tu aplicación
+const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/home" component={Home} />
         <Route path="/landing" component={LandingPage} />
       </Switch>
     </Router>
   );
 }
 
+// Exporta el componente principal para poder usarlo en otros archivos
 export default App;
