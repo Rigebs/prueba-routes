@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import LandingPage from './components/LandingPage';
 
 // Define el componente principal de tu aplicación
 const App = () => {
@@ -10,7 +9,6 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/home" component={Home} />
-        <Route path="/landing" component={LandingPage} />
       </Switch>
     </Router>
   );
