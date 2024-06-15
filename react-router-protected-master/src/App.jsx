@@ -1,14 +1,14 @@
 // Importa React y cualquier otra dependencia necesaria
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 
 const App = () => {
   return (
     <Router>
-      <Switch>
+      <Routes>
         <Route exact path="/home" component={Home} />
-      </Switch>
+      </Routes>
     </Router>
   );
 }
